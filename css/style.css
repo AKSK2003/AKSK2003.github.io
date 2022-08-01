@@ -1,0 +1,559 @@
+body {
+    color: #000;
+    /* font-family: 'Hiragino Mincho Pro',serif; */
+ 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.animateM{
+    opacity:0;
+    transform: translateY(-500px);
+    transition: opacity 1s, transform 1s;
+    /* 透明状態、少しずれた状態からスタート */
+}  
+
+ .animateM.appear{
+    opacity:1;
+    transform:none;
+/* 透明解除、移動無し（到着） */
+/}  
+
+.animate.slide-from-left{
+    transform: translateX(400px);
+}
+
+.animate.slide-from-right{
+    transform: translateX(-400px);
+}
+
+.animate{
+    opacity:0;
+    transform: translateY(300px);
+    transition: opacity .3s, transform .3s;
+    /* 透明状態、少しずれた状態からスタート */
+}
+
+.animate.appear{
+    opacity:1;
+    transform:none;
+/* 透明解除、移動無し（到着） */
+}
+
+.animate.delay{
+    transition-delay: .8s;
+}
+
+
+header {
+    background-color: #96bf48;
+    opacity: 0.9;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    
+}
+
+
+.header-logo {
+    color:#FFF;
+    font-size: 36px;
+    width: 293px;
+    margin-left: 10px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+
+.header-nav {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 28px;
+    margin-bottom: 30px;
+}
+
+.nav-item:nth-child(2) {
+    margin-left: 25px;
+}
+/* これで横並び要素の間に間隔が作成できる。個々の場合「３番目アイテムの左に25pxの間隔」の指定 */
+
+.nav-item:nth-child(3) {
+    margin-left: 25px;
+}
+
+.nav-item:nth-child(4) {
+    margin-left: 25px;
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 22px;
+}
+
+.top {
+    
+    background-image: url(../image/23624670.jpg);
+
+    background-size: cover;
+    background-position: center;
+    height: 755px;
+
+}
+
+.top-title {
+    font-size: 60px;
+
+    /* padding-top: 340px; */
+    padding-top: 630px;
+/*  */
+
+    padding-bottom: 240px;
+    text-align: center;
+}
+
+.course {
+    padding-top: 120px;
+}
+
+.inner {
+
+}
+
+.cmn-title {
+    font-size: 40px;
+    text-align: center;
+    font-style: bold;
+}
+
+.course-cont {
+    padding-top: 40px;
+}
+
+
+.mt{
+    margin-top: 24px;
+}
+
+
+.course-list {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    display: flex;
+    /* コースリストを横並びにしてね、と指示している */
+    justify-content: center;
+    /* justify-content:centerで左右中央揃えになる */
+}
+
+.course-item {
+    width: 590px;
+    box-shadow: 3px 5px 10px #00000029;
+
+    font-size: 24px;
+    /* text-align: left; */
+/*  ここでモバイル時の表示幅を指示*/
+
+display: flex;
+}
+
+.course-item:nth-child(n+2) {
+    margin-left: 20px;
+}
+
+.course-item-image {
+/* width:auto;
+    align-items: center; */
+
+}
+
+.course-item-text {
+    width:500px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+
+    
+    text-align: center;
+    /* text-align: center;で文字列を左右中央揃えにでき */
+}
+
+.course-item-text p {
+    font-size: 24px;
+    /* text-align: center; */
+}
+
+.course-item-box {
+    text-align: center;
+    position: relative;
+
+    margin-top: 12px;
+    margin:12px 16px ;
+    line-height: 21px;
+    /* margin-top: 36px; */
+/*  */
+}
+
+.course-item-box:before {
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 1px;
+    background-color: #707070;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -9px;
+}
+
+.course-item-box p {
+    font-size: 17px;
+}
+
+.course-item-box p:nth-child(2) {
+    margin-top: 8px;
+}
+
+.course-btn {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.course-btn a {
+    box-shadow: 0px 3px 6px #00000029;
+    width: 310px;
+    font-size: 18px;
+    border: 1px solid #EEEEEE;
+    display: inline-block;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    border-radius: 5px;
+}
+
+.teacher {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    overflow: hidden;
+ 
+    /* padding-left: 255px;
+    padding-right: 255px; */
+/* この上の2行が失敗のもと。paddingの幅によってモバイル表示時の画像の表示可能域がなくなって画像が出ない事態になった。ここを消したら画像と文の縦表示が戻った。 */
+
+}
+
+.inner {
+
+}
+
+.cmn-title{
+    font-weight:bold;
+}
+
+.teacher-cont {
+
+
+    /* padding-left: 0px;
+    padding-right: 0px; */
+/* ここでpadding0にしてしまうのは不正解。画像が画面の橋に表示されて表示としておかしい。 */
+}
+
+.teacher-list {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+}
+
+.teacher-item {
+    display: flex;
+/* 円形画像と文章の横並び表示 */
+
+    align-items: center;
+
+}
+
+.teacher-item:nth-child(2) {
+    margin-top: 50px;
+}
+
+.teacher-item-image img{
+    width: 250px; 
+    margin-left: auto;
+    margin-right: auto; 
+
+}
+
+
+
+.techer-item-text {
+    margin-left: 60px;
+    flex: 1;　/* このflexで文章の長さが自動折返しされている。０にすると折り返しされない。 */
+}
+
+.techer-item-text p {
+   
+    margin-top: 30px;
+
+    /* font-size: 18px; */
+    font-size: 24px;
+    line-height: 40px;
+/*  */
+}
+
+.teacher-item-title {
+    padding-left: auto;
+    padding-right: auto;
+    font-size: 40px;
+    /* 関口暁 */
+}
+
+.contact {
+    background-image: url(../image/PAK86.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.inner {
+
+}
+
+.contact-title {
+    font-size: 72px;
+    /* font-size: 36px; */
+    font-weight:bold;
+
+
+    color: #fff;
+    text-shadow:3px 6px 0 #000, -1px -1px 0 #000,
+                2px 2px 0 #000, 2px -1px 0 #000,
+                2px 2px 0 #000,  0-1px 0 #000,
+                2px 0 0 #000, 3px 0 0 #000;
+    
+    text-align: center;
+}
+
+.cntact-text {
+
+    color: #fff;
+    text-shadow:3px 2px 0 #000, -1px -1px 0 #000,
+                -1px 2px 0 #000, 2px -1px 0 #000,
+                0px 2px 0 #000,  0-1px 0 #000,
+                -1px 0 0 #000, 2px 0 0 #000;
+
+
+
+    text-align: center;
+    margin-top: 50px;
+
+    /* font-size: 16px; */
+    font-size: 36px;
+
+    font-weight:bold;
+/*  */
+}
+
+.cntact-text p {
+    margin-top: 20px;
+    line-height: 2;
+}
+
+.contact-btn {
+    text-align: center;
+
+    margin-top: 32px;
+    /* margin-top: 20px; */
+/*  */
+}
+
+.contact-btn a {
+    background-color: #DC143C;
+    color: #fff;
+    font-size: 24px;
+    width: 210px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #96bf48;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    /* margin-top: 10px; */
+    padding: 4px;
+}
+
+.inner {
+
+}
+
+    @media only screen and (max-width: 1088px) {
+
+    .header{
+width:99.999999%
+    }
+
+    .header-logo{
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .header-nav {
+        display:none;
+    }
+
+    
+
+    .top-title p{
+        font-size: 26px;
+        /* margin-top: 0px;
+        margin-bottom: 0px; */
+    }
+
+.contact-title p{
+    font-size: 40px;
+    margin: 0,30;
+}
+
+.cntact-text{
+    font-size: 20px;
+}
+
+  
+
+    .course-list {
+        margin-left: 20px;
+        display: block;
+   /* ここでモバイル時の1列縦表示を指示 */
+    }
+
+    .course-item {
+        
+        width: 99.99999%;
+        
+        display:block;
+    }
+   
+    .course-item-text{
+        padding-left: auto;
+        padding-right: auto;
+        width: auto;
+    /* ここ必要。これがあることでレスポンシブ2段階目の際にコースアイテムのテキストが自動幅調整されることで中央表示される。ないと左寄せになってしまう。 */
+    }
+
+    .course-item-text p {
+        
+        font-size: 34px;
+        text-align:center;
+    }
+
+    
+    .course-item-box p {
+        font-size: 27px;
+        line-height: 45px;
+    }
+  
+
+    .course-item:nth-child(n+2) {
+        margin-left: 0;
+        margin-top:30px;
+    }
+
+
+
+   
+
+    .teacher-item {
+        display: block;
+    
+    }
+
+    .teacher-item-image {
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 280px; 
+   /* この上3行アクティブ必須。ここを非アクティブにすると円形画像が左端に寄ってしまう。このmargin左右で画像を真ん中に表示させている。*/
+
+        /* width: fit-content; */
+    }
+
+    .techer-item-text {
+     
+        width: 91%;
+        margin-left: 26px;
+        margin-right: 26px;
+    }
+
+    .teacher-item-title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .course-item-text {
+        padding-bottom: 30px;
+    
+    }
+
+
+
+
+    @media only screen and (max-width: 664px) {
+
+    
+
+        .body{
+            /* width: auto; */
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .header-logo{
+            display:none;
+        }
+
+        .course-item {
+            /* display: flex; */
+                display: block;
+       /* display:blockでモバイル時の1列縦表示を指示。ここは必要！！*/
+        width: auto;
+        
+        }
+
+.course-item-text{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+    /* これ必要。コース画像と同様にテキストが縮小するために。親要素からまとめて指定する必要あり。子要素の方でsidth:autoを指定しても無効になってしまう*/
+}
+
+.course-btn {
+    display: none;
+    /* 横長のボタンがそのままの大きさで表示されていると、他の要素だけが縮小されてしまう。ボタン事態も小さくするか、ボタン事態を消してしまうかがよさそう。 */
+}
+
+
+}
