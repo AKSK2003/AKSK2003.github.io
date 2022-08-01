@@ -50,7 +50,7 @@ img {
 }
 
 .animate.delay{
-    transition-delay: .8s;
+    transition-delay: .6s;
 }
 
 
@@ -342,7 +342,7 @@ display: flex;
     color: #fff;
     text-shadow:3px 6px 0 #000, -1px -1px 0 #000,
                 2px 2px 0 #000, 2px -1px 0 #000,
-                2px 2px 0 #000,  0-1px 0 #000,
+                2px 2px 0 #000,  -1px 0 #000,
                 2px 0 0 #000, 3px 0 0 #000;
     
     text-align: center;
@@ -523,7 +523,105 @@ width:99.999999%
 
     @media only screen and (max-width: 664px) {
 
+        .contact-title p{
+            font-size: 25px;
+        }
+
+        .cntact-text p{
+            font-size: 13px;
+        }
+
+.course-item-text {
+    width:500px;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+  
     
+    text-align: center;
+    /* text-align: center;で文字列を左右中央揃えにでき */
+}
+
+.course-item-text p {
+    font-size: 20px;
+    line-height: 20px;
+    /* text-align: center; */
+}
+
+.course-item-box {
+    text-align: center;
+    position: relative;
+
+    margin-top: 12px;
+    margin-bottom: 5px;
+    margin:12px 16px ;
+    line-height: 21px;
+    /* margin-top: 36px; */
+/*  */
+}
+
+.course-item-box:before {
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 1px;
+    background-color: #707070;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -9px;
+}
+
+.course-item-box p {
+    font-size: 17px;
+    /* box内の文章のサイズ */
+}
+
+
+
+
+.teacher-item {
+    display: block;
+    /* width:40%; */
+/* このwidth40%を無効にすると円形画像は中央に来るがテキストが横長にはみ出してしまう。ここを無効にしつつテキストがはみ出さなければ解決かもしれない。 */
+}
+
+.teacher-list {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+ 
+}
+
+    
+        .cmn-title p{
+            font-size: 16px;
+        }
+
+        .techer-item-text {
+            width: 99%;
+            margin-left: 0px;
+            margin-right: 0px;
+         /* ここのウィスを240％にしてつじつまを合わせていたのが間違いのもと。teaceh-itemのwidthを40％にしたせいでこっちで再度つじつま合わせをするおかしなことになっていた。ウィスの％による安易な調整は厳禁。要素ごとに調整していくことで混乱を招かずに済む*/
+        }
+
+        .techer-item-text p{
+            font-size: 12px;
+            /* width: 100%; */
+            margin-left: 0px;
+            margin-right: 0px;
+            line-height:15px;
+        }
+    
+        .teacher-item-title {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+
+
 
         .body{
             /* width: auto; */
@@ -531,8 +629,51 @@ width:99.999999%
             margin-left: 0px;
         }
 
+
+        .top {
+    
+            background-image: url(../image/23624670.jpg);
+        
+            background-size: cover;
+            background-position: center;
+            height: 755px;
+        
+        }
+
+        .top-title {
+            font-size: 60px;
+        
+            /* padding-top: 340px; */
+            padding-top: 130px;
+        /*  */
+        
+            /* padding-bottom: 240px; */
+            text-align: center;
+        }
+
+        .animateM{
+            opacity:0;
+            transform: translateY(550px);
+            transition: opacity 1s, transform 1s;
+            /* 透明状態、少しずれた状態からスタート */
+        }  
+        
+         .animateM.appear{
+            opacity:1;
+            transform:none;
+        /* 透明解除、移動無し（到着） */
+        /}  
+
+        .animate.slide-from-left{
+            transform: none;
+        }
+        
+        .animate.slide-from-right{
+            transform: none;
+        }
+
         .header-logo{
-            display:none;
+            /* display:none; */
         }
 
         .course-item {
