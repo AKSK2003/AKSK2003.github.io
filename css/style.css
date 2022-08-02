@@ -494,7 +494,7 @@ width:99.999999%
     .teacher-item-image {
         margin-left: auto; 
         margin-right: auto; 
-        width: 280px; 
+        width: 253px; 
    /* この上3行アクティブ必須。ここを非アクティブにすると円形画像が左端に寄ってしまう。このmargin左右で画像を真ん中に表示させている。*/
 
         /* width: fit-content; */
@@ -588,7 +588,7 @@ width:99.999999%
 }
 
 .teacher-list {
-    padding-left: 10px;
+    padding-left: 24px;
     padding-right: 10px;
     padding-top: 50px;
  
@@ -620,7 +620,16 @@ width:99.999999%
             margin-top: 30px;
         }
 
-
+        .teacher-item-image {
+            margin-left: auto; 
+            margin-right: auto; 
+             
+            align-items: center;
+        
+       /* この上3行アクティブ必須。ここを非アクティブにすると円形画像が左端に寄ってしまう。このmargin左右で画像を真ん中に表示させている。*/
+    
+            /* width: fit-content; */
+        }
 
 
         .body{
